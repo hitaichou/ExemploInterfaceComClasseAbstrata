@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Globalization;
-using ExemploInterfaceComClasseAbstrata.Enums;
+using ExemploInterfaceComClasseAbstrata.Model.Enums;
+using ExemploInterfaceComClasseAbstrata.Model.Entities;
 
 namespace ExemploInterfaceComClasseAbstrata.Entities
 {
-    class Rectangle : Shape
+    class Rectangle : AbstractShape
     {
         public double Width { get; set; }
         public double Height { get; set; }
@@ -19,7 +20,7 @@ namespace ExemploInterfaceComClasseAbstrata.Entities
         public override string ToString()
         {
             return "Rectangle color = "
-                + Color
+                + color
                 + ", width = "
                 + Width.ToString("F2", CultureInfo.InvariantCulture)
                 + ", height = "

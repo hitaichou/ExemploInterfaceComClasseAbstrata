@@ -1,14 +1,15 @@
 ﻿using System;
 using ExemploInterfaceComClasseAbstrata.Entities;
-using ExemploInterfaceComClasseAbstrata.Enums;
+using ExemploInterfaceComClasseAbstrata.Model.Entities;
+using ExemploInterfaceComClasseAbstrata.Model.Enums;
 namespace ExemploInterfaceComClasseAbstrata
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Shape s1 = new Circle() {Radius = 2.0, Color = Color.White };
-            Shape s2 = new Rectangle() {Width = 3.5, Height = 4.2, Color = Color.Black };
+            IShape s1 = new Circle() {Radius = 2.0, color = Color.White };
+            IShape s2 = new Rectangle() {Width = 3.5, Height = 4.2, color = Color.Black };
 
             Console.WriteLine(s1);
             Console.WriteLine(s2);

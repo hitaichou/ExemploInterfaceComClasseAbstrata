@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Globalization;
-using ExemploInterfaceComClasseAbstrata.Enums;
+using ExemploInterfaceComClasseAbstrata.Model.Enums;
+using ExemploInterfaceComClasseAbstrata.Model.Entities;
 
 namespace ExemploInterfaceComClasseAbstrata.Entities
 {
-    class Circle : Shape
+    class Circle : AbstractShape
     {
         public double Radius { get; set; }
 
@@ -16,7 +17,7 @@ namespace ExemploInterfaceComClasseAbstrata.Entities
         public override string ToString()
         {
             return "Circle color = "
-                + Color
+                + color
                 + ", radius = "
                 + Radius.ToString("F2", CultureInfo.InvariantCulture)
                 + ", area = " 
